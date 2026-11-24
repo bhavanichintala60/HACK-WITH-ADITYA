@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TEAM RCS | Smart Emergency Reporting</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><header><div class="brand"><b>RCS</b><span><strong>TEAM RCS</strong><small>Smart Emergency Reporting</small></span></div><label class="demo">DEMO PROTOTYPE</label></header>
+<main><section class="hero"><div><small>SMART REPORTING · INTELLIGENT RESPONSE</small><h1>No Emergency Should<br><em>Go Unnoticed.</em></h1><p>Multilingual emergency reporting concept for remote, rural and hilly areas.</p></div><div class="sos">SOS</div></section>
+<div class="warning"><b>Prototype only:</b> This demo does not contact police or emergency services. For a real emergency in India, call <b>112</b>.</div>
+<div class="layout"><section class="panel"><small class="eyebrow">NEW INCIDENT</small><h2>Report an emergency</h2>
+<form id="form"><label>Preferred language</label><select id="language"><option>English</option><option>Telugu</option><option>Hindi</option></select>
+<label>Incident type</label><select id="category" required><option value="">Select incident</option><option>Accident</option><option>Landslide</option><option>Robbery</option><option>Road Blockage</option><option>Fire</option><option>Medical Emergency</option><option>Other</option></select>
+<label>Describe what happened</label><textarea id="description" rows="4" required placeholder="Enter incident details..."></textarea>
+<div class="row"><button type="button" class="secondary" id="voice">🎙 Speak report</button><small id="voiceStatus">Browser speech support may vary.</small></div>
+<div class="location"><div><b>Incident location</b><small id="locText">Location not captured.</small></div><button type="button" class="secondary" id="gps">Use my GPS</button></div>
+<input type="hidden" id="lat"><input type="hidden" id="lng"><button class="primary" type="submit">Submit demo report</button>
+<p class="hint">Offline reports are saved in this browser and queued for sync when connectivity returns.</p></form><p id="message"></p></section>
+<aside class="panel"><small class="eyebrow">SYSTEM WORKFLOW</small><h2>How it works</h2><ol><li>Choose language and describe incident.</li><li>Add GPS location if available.</li><li>Submit or save offline.</li><li>Demo backend assigns a rule-based priority.</li></ol>
+<div class="sync"><b id="net">Checking connection…</b><small id="pending">0 reports waiting to sync</small></div><p class="hint">Patrol suggestions use fictional sample data.</p></aside></div>
+<section class="panel reports"><div class="row between"><div><small class="eyebrow">DEMO CONTROL PANEL</small><h2>Recent reports</h2></div><button class="secondary" id="refresh">Refresh</button></div><div id="reports">No reports loaded.</div></section></main>
+<footer>TEAM RCS · Smart Reporting. Intelligent Response. Safer Communities.</footer><script src="/static/app.js"></script></body></html>
